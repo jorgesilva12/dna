@@ -13,15 +13,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserForm {
-    @NotBlank
     private String name;
-    @NotBlank
     private String username;
-    @NotBlank
     private String password;
-    @Email
-    @NotBlank
     private String email;
-    @NotBlank
     private List<Role> roles = new ArrayList<>();
 }

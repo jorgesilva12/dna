@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class WelcomeController {
     @GetMapping(produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
-    public String welcome(){return "<html>\n" + "<header><title>Chruch System</title></header>\n" +
-            "<body>\n"+ "<h3>Welcome to the DNA - projects management.</h3>\n\n" + "We are this moment in build\n" + "</body>\n" + "</html>";}
+    public String welcome(){return "<html>\n" + "<header><title>DNA</title></header>\n" +
+            "<body>\n"+ "<h3>Welcome to the DNA - projects management.</h3>\n\n" + "It's in build this moment\n" + "</body>\n" + "</html>";}
 }

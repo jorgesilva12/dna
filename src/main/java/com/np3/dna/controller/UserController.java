@@ -30,8 +30,8 @@ public class UserController {
     @GetMapping("/getId/{uuid}")
     public User getId(@PathVariable() UUID uuid){return userService.getId(uuid);}
 
-    @PreAuthorize("permitAll")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/create")
-    public User create(@Valid UserForm userForm){return userService.create(userForm);}
+    public User create(@RequestBody UserForm userForm){return userService.create(userForm);}
 
 }

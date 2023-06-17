@@ -14,8 +14,8 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity security) throws Exception{
         security
-//                .httpBasic()
-                .formLogin()
+                .httpBasic()
+//                .formLogin()
                 .and()
                 .authorizeRequests()
                     .requestMatchers("/").anonymous()

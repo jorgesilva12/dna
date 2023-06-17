@@ -7,6 +7,7 @@ import com.np3.dna.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -29,4 +30,6 @@ public class RoleServiceImpl implements RoleService {
     public Role create(Role role) {
         return roleRepository.save(role);
     }
+
+    public List<Role> getAll() {return roleRepository.findAll(); }
 }
