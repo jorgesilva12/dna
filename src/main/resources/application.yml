@@ -1,0 +1,23 @@
+
+spring:
+  datasource:
+    initialization-mode: always
+    platform: org.hibernate.dialect.PostgreSQLDialect
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/dna
+    username: postgres
+    password: sa
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update #create-drop
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+security:
+  password: admin123
