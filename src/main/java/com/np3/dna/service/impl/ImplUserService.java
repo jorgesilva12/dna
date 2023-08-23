@@ -20,7 +20,7 @@ public class ImplUserService implements UserService {
 
     @Override
     public List<User> list() {
-        return null;
+        return userRepository.findAll();
     }
 
     @Override
@@ -29,8 +29,8 @@ public class ImplUserService implements UserService {
     }
 
     @Override
-    public User update(User user) {
-        return null;
+    public User update(User user) { 
+        return userRepository.save(user);
     }
 
     @Override

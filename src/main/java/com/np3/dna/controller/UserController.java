@@ -14,4 +14,9 @@ public class UserController {
 
     @PostMapping("/create")
     public User create(@RequestBody User user){return userService.create(user);}
+
+    @PutMapping ("/update")
+    public User update(@RequestBody User user) { return userService.update(user);}
+    
+    
 }

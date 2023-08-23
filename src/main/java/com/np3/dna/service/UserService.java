@@ -1,6 +1,5 @@
 package com.np3.dna.service;
 
-import com.np3.dna.model.Role;
 import com.np3.dna.model.User;
 
 import java.util.List;
