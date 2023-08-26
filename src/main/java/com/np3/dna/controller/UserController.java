@@ -19,12 +19,7 @@ public class UserController {
     @GetMapping("/list")
     public List<User> list(){return userService.list();}
     @PostMapping("/create")
-    public User create(@RequestBody User user){return userService.create(user);}
-
-    @PutMapping ("/update")
-    public User update(@RequestBody User user) { return userService.update(user);}
-    
-    
+    public User create(@RequestBody User user){return userService.create(user);}   
     @PutMapping("/update")
     public User update(@RequestBody User user){return userService.update(user);}
     @DeleteMapping("/delete")
