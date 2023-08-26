@@ -30,18 +30,16 @@ public class ImplRoleService implements RoleService {
     }
 
     @Override
-    public Role update(Role role) {
-        return roleRepository.save(role);
-    }
+    public Role update(Role role) { return roleRepository.save(role); }
 
     @Override
     public String delete(UUID uuid) {
         Optional<Role> role = roleRepository.findById(uuid);
-        if(role.get() == null){
+        if(role.isEmpty()){
             throw new RuntimeException("Role not found.");
         }else {
             roleRepository.deleteById(uuid);
-            return "Role deleted with sucess!!!";
+            return "Role deleted with success!!!";
         }
     }
 }
