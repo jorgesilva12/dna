@@ -1,5 +1,6 @@
 package com.np3.dna.service.impl;
 
+import com.np3.dna.enums.RoleName;
 import com.np3.dna.model.Role;
 import com.np3.dna.repository.RoleRepository;
 import com.np3.dna.service.RoleService;
@@ -31,6 +32,11 @@ public class ImplRoleService implements RoleService {
 
     @Override
     public Role update(Role role) { return roleRepository.save(role); }
+
+    @Override
+    public Optional<Role> findByRoleName(RoleName roleName) {
+        return roleRepository.findByRoleName(roleName);
+    }
 
     @Override
     public String delete(UUID uuid) {

@@ -1,9 +1,9 @@
 package com.np3.dna.service;
 
-import com.np3.dna.model.Role;
 import com.np3.dna.model.User;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface UserService {
@@ -12,4 +12,6 @@ public interface UserService {
     User create(User user);// Inclui usuario
     User update(User user);// Altera usuario
     String delete(UUID uuid);// Deleta usuario
+    Optional<User> findByUsername(String username);
+    User createStart(User user);
 }

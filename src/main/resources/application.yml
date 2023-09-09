@@ -21,3 +21,7 @@ spring:
 
 security:
   password: admin123
+  name: Administrador
+  username: admin
+  email: admin@np3tecnologia.com.br
+  number: 9999999999

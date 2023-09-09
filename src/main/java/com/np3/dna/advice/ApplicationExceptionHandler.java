@@ -17,4 +17,5 @@ public class ApplicationExceptionHandler {
         errorMap.put("Error",exception.getMessage());
         return errorMap;
     }
+    
 }
